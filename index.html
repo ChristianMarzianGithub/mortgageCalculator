@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mortgage Payoff Estimator</title>
+    <link rel="stylesheet" href="./src/styles.css" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-xxxxxxxxxxxx" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <aside class="ad-column">
+      <div class="ad-slot">
+        <span>Google AdSense</span>
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-xxxxxxxxxxxx" data-ad-slot="0000000001" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+    </aside>
+
+    <main>
+      <header>
+        <h1>Mortgage Payoff Estimator</h1>
+        <p>
+          Enter your home price, expected interest rate, down payment, and monthly payment. Choose which field to
+          calculate and get a payoff timeline for your mortgage.
+        </p>
+      </header>
+
+      <section class="card">
+        <form id="calculator-form">
+          <div class="form-grid">
+            <div>
+              <label for="buying-price">Buying price ($)</label>
+              <input id="buying-price" type="number" min="0" step="0.01" required />
+            </div>
+            <div>
+              <label for="loan-percentage">Loan percentage (interest %)</label>
+              <input id="loan-percentage" type="number" min="0" step="0.01" required />
+            </div>
+            <div>
+              <label for="down-payment">Down payment ($)</label>
+              <input id="down-payment" type="number" min="0" step="0.01" required />
+            </div>
+            <div>
+              <label for="monthly-payment">Monthly payment ($)</label>
+              <input id="monthly-payment" type="number" min="0" step="0.01" required />
+            </div>
+            <div>
+              <label for="term-years">Loan term (years)</label>
+              <input id="term-years" type="number" min="0" step="1" placeholder="30" />
+            </div>
+            <div>
+              <label for="term-months">Additional months</label>
+              <input id="term-months" type="number" min="0" max="120" step="1" placeholder="0" />
+            </div>
+          </div>
+
+          <fieldset>
+            <legend>Select the field to calculate</legend>
+            <div class="radio-group">
+              <label class="radio-option">
+                <input type="radio" name="target-field" value="price" />
+                Calculate buying price
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="target-field" value="loanPercentage" />
+                Calculate interest rate
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="target-field" value="downPayment" />
+                Calculate down payment
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="target-field" value="monthlyPayment" checked />
+                Calculate monthly payment
+              </label>
+            </div>
+          </fieldset>
+
+          <button type="submit">Calculate</button>
+        </form>
+
+        <div class="result">
+          <p id="result-text">Complete the fields and run a calculation to see the result.</p>
+          <p id="payoff-text"></p>
+          <p class="note">
+            Calculations assume a fixed-rate mortgage with a 30-year amortization for computed fields unless you
+            provide a custom term above. Replace the ad placeholders with your own Google AdSense client and slot IDs
+            when deploying.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <aside class="ad-column">
+      <div class="ad-slot">
+        <span>Google AdSense</span>
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-xxxxxxxxxxxx" data-ad-slot="0000000002" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+    </aside>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
