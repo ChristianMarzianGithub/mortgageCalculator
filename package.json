@@ -1,0 +1,12 @@
+{
+  "name": "mortgagecalculator",
+  "version": "1.0.0",
+  "description": "A tool that gives you a rough estimate how long you need to pay off a mortgage.",
+  "type": "module",
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": ["mortgage", "calculator"],
+  "author": "",
+  "license": "MIT"
+}
